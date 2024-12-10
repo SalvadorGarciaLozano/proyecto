@@ -1,0 +1,49 @@
+{
+  "juegos": [
+    {
+      "id": "1",
+      "nombre": "Bloodborne",
+      "plataforma": "PlayStation",
+      "jugadores": "Singleplayer",
+      "imagen": "https://i.blogs.es/587a7c/bloodborne/1366_2000.jpeg"
+    },
+    {
+      "id": "0fe7",
+      "nombre": "Minecraft",
+      "plataforma": "multiplataforma",
+      "jugadores": "multiplayer",
+      "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2021/07/minecraft-classic-2404703.jpg"
+    },
+    {
+      "id": "075b",
+      "nombre": "Rocket League",
+      "plataforma": "Multiplataforma",
+      "jugadores": "multiplayer",
+      "imagen": "https://www.rocketleague.com/images/keyart/rl_evergreen.jpg"
+    },
+    {
+      "id": "fc14",
+      "nombre": "League Of Legends",
+      "plataforma": "PC",
+      "jugadores": "multiplayer",
+      "imagen": "https://img.redbull.com/images/c_fill,g_auto,w_1200,h_600/f_auto,q_auto/redbullcom/2022/8/1/ksfga6rlx2ugfhjd9vnk/league-of-legends"
+    }
+  ],
+  "login": [
+    {
+      "id": "8b64",
+      "username": "usuario@gmail.com",
+      "password": "estonofunca"
+    },
+    {
+      "id": "1733335476994",
+      "username": "usuario1@gmail.com",
+      "password": "novanova"
+    },
+    {
+      "id": "1733755795563",
+      "username": "usuario2@gmail.com",
+      "password": "siva"
+    }
+  ]
+}

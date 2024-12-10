@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css"> <!-- Enlace al archivo CSS para aplicar estilos -->
+  <title>Iniciar Sesión</title>
+</head>
+<body class="login-page">
+
+  <div class="login-container">
+
+    <!-- Sección de Login -->
+    <section class="login-section"> <!-- Sección para el formulario de inicio de sesión -->
+      <h2 class="listado">Iniciar Sesión</h2>
+      <form id="login-form"> <!-- Formulario de inicio de sesión -->
+        <div class="input-group"> <!-- Contenedor del campo de correo -->
+          <label for="correo-login">Correo electrónico:</label> <!-- Etiqueta para el input de correo -->
+          <input type="email" id="correo-login" required placeholder="Ingresa tu correo"> <!-- Campo de correo -->
+        </div>
+        <div class="input-group"> <!-- Contenedor del campo de contraseña -->
+          <label for="pswd-login">Contraseña:</label> <!-- Etiqueta para el input de contraseña -->
+          <input type="password" id="pswd-login" required placeholder="Ingresa tu contraseña"> <!-- Campo de contraseña -->
+        </div>
+        <button type="submit" class="btn-submit">Iniciar Sesión</button> <!-- Botón para enviar el formulario de login -->
+        <div id="login-error" class="error-message"></div> <!-- Mensaje de error dinámico para el login -->
+      </form>
+      <button id="show-register-form" class="btn-register">¿No tienes cuenta? Regístrate</button> <!-- Botón para mostrar el formulario de registro -->
+    </section>
+
+    <!-- Sección de Registro -->
+    <section id="register-section" class="register-section" style="display: none;"> <!-- Sección para el registro (oculta inicialmente) -->
+      <h2 class="listado">Registrar Usuario</h2>
+      <form id="register-form"> <!-- Formulario de registro -->
+        <div class="input-group"> <!-- Contenedor del campo de correo -->
+          <label for="correo-register">Correo electrónico:</label> <!-- Etiqueta para el input de correo -->
+          <input type="email" id="correo-register" required placeholder="Ingresa tu correo"> <!-- Campo de correo -->
+        </div>
+        <div class="input-group"> <!-- Contenedor del campo de contraseña -->
+          <label for="pswd-register">Contraseña:</label> <!-- Etiqueta para el input de contraseña -->
+          <input type="password" id="pswd-register" required placeholder="Crea una contraseña"> <!-- Campo de contraseña -->
+        </div>
+        <button type="submit" class="btn-submit">Registrar</button> <!-- Botón para enviar el formulario de registro -->
+        <div id="register-error" class="error-message"></div> <!-- Mensaje de error dinámico para el registro -->
+        <div id="register-success" class="success-message"></div> <!-- Mensaje de éxito para el registro -->
+      </form>
+      <button id="back-to-login" class="btn-back">Volver a Iniciar Sesión</button> <!-- Botón para regresar al formulario de login -->
+    </section>
+
+  </div>
+
+  <!-- Archivo JavaScript para la lógica de interacción -->
+  <script src="app.js"></script>
+</body>
+</html>

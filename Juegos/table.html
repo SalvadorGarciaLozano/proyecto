@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>API Juegos</title>
+</head>
+<body>
+  <!-- Encabezado con barra de navegación -->
+  <header id="main-header" class="main-header">
+    <h1 class="listado">API JUEGOS</h1>
+    <nav class="nav-bar">
+      <ul class="nav-menu">
+        <li><a href="#juegos-section">Listado de Juegos</a></li>
+        <li><a href="#noticias-section">Noticias</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+  <h4 class="listado">Listado de Juegos</h4>
+  <p class="texto">Bienvenidos a API juegos, la mejor API del mercado de este sector, no solo sirve para listar tus juegos favoritos, sino que
+    tambien podras añadir aquellos que mas te gusten y que no se encuentren ya dentro de nuestra amplia base de datos. Dentro de esta tambien
+     podrás a nuestra nueva sección de noticias, que es actualizada de manera diaria para mantenerte al dia con todo lo relacionado
+    con los videojuegos.
+  </p>
+  <p class="texto">
+    Nuestros expertos analistas se encargan de analizar el mercado y añadir todos los dias los titulos actualizados de manera rapida y eficiente,
+    asi como encargarse de mantenerse al dia con las noticias que pueden ocurrir en este mundillo todos los dias, de manera que cada vez que
+    acudas a la seccion de noticias tengas algo nuevo e interesante que ver.
+  <!-- Sección de listado de juegos -->
+  <section id="juegos-section" class="section">
+    <h2 class="listado">Listado de Juegos</h2>
+    <p id="nombre-usuario"></p>
+
+    <!-- Campo de búsqueda -->
+    <h3 class="listado">Buscar Juegos</h3>
+    <input type="text" id="search-input" placeholder="Buscar juego por nombre...">
+
+    <!-- Formulario para agregar un nuevo juego -->
+    <h3 class="listado">Agregar un Nuevo Juego</h3>
+    <form id="add-game-form">
+      <label for="nombre-juego">Nombre del Juego:</label>
+      <input type="text" id="nombre-juego" required>
+
+      <label for="plataforma-juego">Plataforma:</label>
+      <input type="text" id="plataforma-juego" required>
+
+      <label for="jugadores-juego">Número de Jugadores:</label>
+      <select id="jugadores-juego" required>
+        <option value="singleplayer">Singleplayer</option>
+        <option value="multiplayer">Multiplayer</option>
+      </select>
+    
+      <label for="imagen-juego">Imagen del Juego (URL):</label>
+      <input type="url" id="imagen-juego" required>
+
+      <button type="submit">Agregar Juego</button>
+    </form>
+
+    <!-- Contenedor de tarjetas -->
+    <div id="tarjetas-container" class="tarjetas-container"></div>
+  </section>
+
+  <!-- Sección de noticias -->
+  <section id="noticias-section" class="section">
+    <h2 class="listado">Noticias</h2>
+    <div id="news-container" class="news-container">
+      <!-- Tarjeta de ejemplo -->
+      <div class="news-card">
+        <img src="https://sm.ign.com/t/ign_es/screenshot/default/977818_8mjp.1280.jpg" alt="Noticia 1" class="news-image">
+        <h3 class="news-title">Lanzamiento de un nuevo juego RPG</h3>
+        <p class="news-description">Descubre el emocionante mundo del nuevo RPG que llegará este mes.</p>
+      </div>
+            <!-- Repetición de tarjetas para otras noticias -->
+      <div class="news-card">
+        <img src="https://esports.as.com/2023/03/06/rocket-league/Nueva-Rocket-League-II-GTI_1662743715_1122524_1440x810.jpg" alt="Noticia 2" class="news-image">
+        <h3 class="news-title">Actualización de un popular multijugador</h3>
+        <p class="news-description">Parece que el conocido juego Rocket League se prepara para su nueva temporada con unos cambios que han
+          dejado a la comunidad sorprendida.</p>
+      </div>
+      <div class="news-card">
+        <img src="https://i.blogs.es/7605fd/league-of-legends-worlds/1366_2000.jpg" alt="Noticia 3" class="news-image">
+        <h3 class="news-title">Próximo evento de eSports</h3>
+        <p class="news-description">comienzan las preparaciones para el mayor evento de sports del mundo,te contados donde y cuando se 
+          celebraran los mundiales de League Of Legends 2025.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Modal de detalle -->
+<div id="detalle-modal" class="detalle-modal"> <!-- Modal para mostrar detalles del juego -->
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span> <!-- Botón de cierre del modal -->
+    <div class="detalle-info">
+      <h2 id="detalle-nombre"></h2>
+      <div class="detalle-imagen-container">
+        <img id="detalle-imagen" src="" alt="Imagen del Juego" class="detalle-imagen">
+      </div>
+      <div class="detalle-texto">
+        <p><strong>Plataforma:</strong> <span id="detalle-plataforma"></span></p>
+        <p><strong>Jugadores:</strong> <span id="detalle-jugadores"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Botón de cierre de sesión -->
+  <button id="logout-btn">Cerrar Sesión</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
